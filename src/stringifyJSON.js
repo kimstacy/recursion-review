@@ -48,15 +48,15 @@ var stringifyJSON = function(obj) {
     // create the resultStr as final result
     // use for loop to iterate over result array
     // append each substring to the final result
-    var resultStr = "[";
+    var resultStr = '[';
     for (var i = 0; i < result.length; i++) {
       if (i !== 0) {
-        resultStr += ",";
+        resultStr += ',';
       }
       resultStr += result[i].toString();
     }
 
-    resultStr += "]";
+    resultStr += ']';
     return resultStr;
   }
 
@@ -75,7 +75,7 @@ var stringifyJSON = function(obj) {
         continue;
       }
       result.push(stringifyJSON(key) + ':' + stringifyJSON(obj[key]));
-    };
+    }
 
     return '{' + result.join(',') + '}';
   }
